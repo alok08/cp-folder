@@ -3,9 +3,12 @@ using namespace std;
 
 void print(vector<int> const &vect)
 {
-    for(auto it = vect.begin(); it!=vect.end(); it++)
+    /*for(auto it = vect.begin(); it!=vect.end(); it++)
     {
         cout<<*it<<" ";
+    }*/
+     for (int i: vect) {
+        cout << i << " ";
     }
     cout<<endl;
 }
