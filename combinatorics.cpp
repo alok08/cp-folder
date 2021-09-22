@@ -7,29 +7,22 @@ int main()
     cin>>t;
     while(t--)
     {
-        ll a, b, c, m;
-        cin>>a>>b>>c>>m;
-        if(m==0)
+        ll arr[3], m;
+        cin>>arr[0]>>arr[1]>>arr[2]>>m;
+        sort(arr, arr+3);
+        int max = arr[0]+arr[1]+arr[2]-3;
+        int min = arr[2]-arr[1]-arr[0]-1;
+        if(max<m)
         {
-            cout<<"YES"<<endl;
+            cout<<"NO"<<endl;
         }
-        else if (a>1 || b>1 || c>1)
+        else if(min>m)
         {
-            int n1 = a/m;
-            int n2 = b/m;
-            int n3 = c/m;
-            if(n1+n2+n3 == m)
-            {
-                cout<<"YES"<<endl;
-            }
-            else
-            {
-                cout<<"NO"<<endl;
-            }
+            cout<<"NO"<<endl;
         }
         else
         {
-            cout<<"NO"<<endl;
+            cout<<"YES"<<endl;
         }
     }
 
